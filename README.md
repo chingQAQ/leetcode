@@ -1,6 +1,6 @@
 # leetcode
 | Id | Title | Difficulty |
-| :--------: |  --------- |  --------- | 
+| :--------: | :--------- | :---: |
 | [94][0094] | [Binary tree inorder traversal](<./src/94.binary-tree-inorder-traversal.ts>) | ![Easy][Easy] |
 
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
