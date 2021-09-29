@@ -1,4 +1,4 @@
-﻿import { TreeNode } from '../src/utility';
+﻿import { TreeNode } from '../lib';
 
 const inorderTraversal = (root: TreeNode | null): number[] => {
   if (root == null || root.val == null) return [];

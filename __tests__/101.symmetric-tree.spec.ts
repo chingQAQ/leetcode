@@ -1,8 +1,4 @@
-﻿import { TreeNode } from '../src/utility';
-
-interface Same<Type> {
-  (x: Type | null, y: Type | null): boolean;
-};
+﻿import { TreeNode } from '../lib';
 
 const isSymmetric = (root: TreeNode | null): boolean => {
   
