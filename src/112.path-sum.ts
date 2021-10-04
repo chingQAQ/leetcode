@@ -20,22 +20,14 @@
  */
 
 const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
-  if (root?.val == null) return false;
+  const sum = (root: TreeNode | null, counter: number): boolean | number => {
+    if (root == null) return false;
+    if (!root.left && !root.right && counter - root.val === 0) return true;
 
-  const sum = (root: TreeNode | null, counter: number, targetSum?: number): boolean | number => {
-    if (root == null) return counter === targetSum;
-
-    let left = <number>sum(root.left, counter + root.val, targetSum);
-    let right = <number>sum(root.right, counter + root.val, targetSum);
-
-    return left || right;
+    return <number>sum(root.left, counter - root.val) || <number>sum(root.right, counter - root.val);
   }
 
-  if (!root.left || !root.right) {
-    return <boolean>sum(root.left || root.right, 0, targetSum)
-  }
-
-  return <boolean>sum(root, 0, targetSum);
+  return <boolean>sum(root, targetSum);
 };
 
 module.exports = hasPathSum;
