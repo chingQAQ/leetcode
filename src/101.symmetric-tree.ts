@@ -20,47 +20,45 @@
  */
 
 const isSymmetric = (root: TreeNode | null): boolean => {
+	if (root == null || root.val == null) { return true; }
 
-  if (root == null || root.val == null) return true;
+	if (root == null || root.val == null) { return true; }
 
-  if (root == null || root.val == null) return true;
+	const leftStack: Array<TreeNode> = [];
+	const rightStark: Array<TreeNode> = [];
 
-  const leftStack: Array<TreeNode> = [];
-  const rightStark: Array<TreeNode> = [];
+	if (root.left != null) {
+		if (root.right == null) { return false; }
 
-  if (root.left != null) {
-    if (root.right == null) return false;
+		leftStack.push(root.left);
+		rightStark.push(root.right);
+	} else if (root.right != null) { return false; }
 
-    leftStack.push(root.left);
-    rightStark.push(root.right);
-  } else if (root.right != null) return false;
+	while (leftStack.length || rightStark.length) {
+		if ((leftStack.length + rightStark.length) % 2 != 0) { return false; }
 
-  while (leftStack.length || rightStark.length) {
-    if ((leftStack.length + rightStark.length) % 2 != 0) return false;
+		const main = <TreeNode>leftStack.pop();
+		const mirror = <TreeNode>rightStark.pop();
 
-    const main = <TreeNode>leftStack.pop();
-    const mirror = <TreeNode>rightStark.pop();
+		if (main.val != mirror.val) { return false; }
 
-    if (main.val != mirror.val) return false;
+		if (main.left != null) {
+			if (mirror.right == null) { return false; }
 
-    if (main.left != null) {
-      if (mirror.right == null) return false;
+			leftStack.push(main.left);
+			rightStark.push(mirror.right);
+		} else if (mirror.right != null) { return false; }
 
-      leftStack.push(main.left);
-      rightStark.push(mirror.right);
-    } else if (mirror.right != null) return false;
+		if (main.right != null) {
+			if (mirror.left == null) { return false; }
 
-    if (main.right != null) {
-      if (mirror.left == null) return false;
+			leftStack.push(main.right);
+			rightStark.push(mirror.left);
+		} else if (mirror.left != null) { return false; }
+	}
 
-      leftStack.push(main.right);
-      rightStark.push(mirror.left);
-    } else if (mirror.left != null) return false;
-  };
-
-  return true;
-}
+	return true;
+};
 
 module.exports = isSymmetric;
 // @lc code=end
-

@@ -20,20 +20,20 @@
  */
 
 const isBalanced = (root: TreeNode | null): boolean => {
-  if (!root) return true;
+	if (!root) { return true; }
 
-  const deepDetection = (node: TreeNode | null): number => {
-    if (node == null) return 0;
+	const deepDetection = (node: TreeNode | null): number => {
+		if (node == null) { return 0; }
 
-    const left = deepDetection(node.left);
-    const right = deepDetection(node.right);
+		const left = deepDetection(node.left);
+		const right = deepDetection(node.right);
 
-    if (Math.abs(left - right) > 1) return Infinity;
+		if (Math.abs(left - right) > 1) { return Infinity; }
 
-    return 1 + Math.max(left, right);
-  }
+		return 1 + Math.max(left, right);
+	};
 
-  return !(deepDetection(root) === Infinity);
+	return !(deepDetection(root) === Infinity);
 };
 
 module.exports = isBalanced;

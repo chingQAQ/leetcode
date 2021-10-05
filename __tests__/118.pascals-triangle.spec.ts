@@ -5,59 +5,69 @@ interface Generate {
 }
 
 const generate: Generate = (numRows: number, ret?: NumberArray): NumberArray => {
-  if (ret == null) {
-    return generate(numRows, [[1]]);
-  }
+	if (ret == null) {
+		return generate(numRows, [[1]]);
+	}
 
-  if (ret.length === numRows) return ret;
-  
-  const last: number[] = ret[ret.length - 1];
-  const newArr: number[] = [];
+	if (ret.length === numRows) { return ret; }
 
-  for (let i = 0, j = 0; i < ret.length;) {
-    if ( i === j ) {
-      newArr.push(last[j]);
-      j++;
-      continue;
-    }
+	const last: number[] = ret[ret.length - 1];
+	const newArr: number[] = [];
 
-    if (i === ret.length - 1) {
-      newArr.push(last[i]);
-    } else {
-      newArr.push(last[i] + last[j]);
-    }
+	for (let i = 0, j = 0; i < ret.length;) {
+		if (i === j) {
+			newArr.push(last[j]);
+			j++;
+			continue;
+		}
 
-    i++;
-    j++;
-  }
+		if (i === ret.length - 1) {
+			newArr.push(last[i]);
+		} else {
+			newArr.push(last[i] + last[j]);
+		}
 
-  ret.push(newArr);
+		i++;
+		j++;
+	}
 
-  return generate(numRows, ret);
+	ret.push(newArr);
+
+	return generate(numRows, ret);
 };
 
 test('expect use numRows input 5, return [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]].', () => {
-  const numRows: number = 5;
-  const expected = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]];
-  const actual = generate(numRows);
+	const numRows = 5;
+	const expected = [
+		[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [
+			1, 4, 6, 4, 1
+		]
+	];
+	const actual = generate(numRows);
 
-  expect(actual).toEqual(expected);
-})
+	expect(actual).toEqual(expected);
+});
 
 test('expect use numRows input 1, return [[1]].', () => {
-  const numRows: number = 1;
-  const expected = [[1]];
-  const actual = generate(numRows);
+	const numRows = 1;
+	const expected = [[1]];
+	const actual = generate(numRows);
 
-  expect(actual).toEqual(expected);
-})
+	expect(actual).toEqual(expected);
+});
 
 test('expect use numRows input 6, return [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]], [1, 5, 10, 10, 5, 1]].', () => {
-  const numRows: number = 6;
-  const expected = [[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1], [1, 5, 10, 10, 5, 1]];
-  const actual = generate(numRows);
+	const numRows = 6;
+	const expected = [
+		[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [
+			1, 4, 6, 4, 1
+		], [
+			1, 5, 10, 10, 5, 1
+		]
+	];
+	const actual = generate(numRows);
 
-  expect(actual).toEqual(expected);
-})
+	expect(actual).toEqual(expected);
+});
 
 export default generate;

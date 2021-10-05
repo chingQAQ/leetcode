@@ -20,18 +20,20 @@
  */
 
 const minDepth = (root: TreeNode | null): number => {
-  if (root == null) return 0;
+	if (root == null) { return 0; }
 
-  const depthDetect = (node: TreeNode | null): number => {
-    if (node == null) return 0;
-    if (node.left == null) return depthDetect(node.right) + 1;
-    if (node.right == null) return depthDetect(node.left) + 1;
-    return Math.min(depthDetect(node.left), depthDetect(node.right)) + 1;
-  };
+	const depthDetect = (node: TreeNode | null): number => {
+		if (node == null) { return 0; }
 
-  return depthDetect(root);
+		if (node.left == null) { return depthDetect(node.right) + 1; }
+
+		if (node.right == null) { return depthDetect(node.left) + 1; }
+
+		return Math.min(depthDetect(node.left), depthDetect(node.right)) + 1;
+	};
+
+	return depthDetect(root);
 };
 
 module.exports = minDepth;
 // @lc code=end
-

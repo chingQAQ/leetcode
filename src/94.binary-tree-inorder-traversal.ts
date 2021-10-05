@@ -20,26 +20,25 @@
  */
 
 const inorderTraversal = (root: TreeNode | null): number[] => {
-  if (root == null || root.val == null) return [];
+	if (root == null || root.val == null) { return []; }
 
-  let ret: number[] = [];
-  let stack: Array<TreeNode> = [];
-  let currentNode: TreeNode | null = root;
+	const ret: number[] = [];
+	const stack: Array<TreeNode> = [];
+	let currentNode: TreeNode | null = root;
 
-  do {
-    if (currentNode) {
-      stack.push(currentNode);
-      currentNode = <TreeNode>currentNode.left;
-    } else {
-      const lastNode = <TreeNode>stack.pop();
-      ret.push(lastNode.val);
-      currentNode = <TreeNode>lastNode.right;
-    }
-  } while (stack.length !== 0 || currentNode != null);
+	do {
+		if (currentNode) {
+			stack.push(currentNode);
+			currentNode = <TreeNode>currentNode.left;
+		} else {
+			const lastNode = <TreeNode>stack.pop();
+			ret.push(lastNode.val);
+			currentNode = <TreeNode>lastNode.right;
+		}
+	} while (stack.length !== 0 || currentNode != null);
 
-  return ret;
-}
+	return ret;
+};
 
 module.exports = inorderTraversal;
 // @lc code=end
-

@@ -12,38 +12,37 @@ interface Generate {
 }
 
 const generate: Generate = (numRows: number, ret?: NumberArray): NumberArray => {
-  if (ret == null) {
-    return generate(numRows, [[1]]);
-  }
+	if (ret == null) {
+		return generate(numRows, [[1]]);
+	}
 
-  if (ret.length === numRows) return ret;
+	if (ret.length === numRows) { return ret; }
 
-  const last: number[] = ret[ret.length - 1];
-  const newArr: number[] = [];
+	const last: number[] = ret[ret.length - 1];
+	const newArr: number[] = [];
 
-  for (let i = 0, j = 0; i < ret.length;) {
-    if (i === j) {
-      newArr.push(last[j]);
-      j++;
-      continue;
-    }
+	for (let i = 0, j = 0; i < ret.length;) {
+		if (i === j) {
+			newArr.push(last[j]);
+			j++;
+			continue;
+		}
 
-    if (i === ret.length - 1) {
-      newArr.push(last[i]);
-    } else {
-      newArr.push(last[i] + last[j]);
-    }
+		if (i === ret.length - 1) {
+			newArr.push(last[i]);
+		} else {
+			newArr.push(last[i] + last[j]);
+		}
 
-    i++;
-    j++;
-  }
+		i++;
+		j++;
+	}
 
-  ret.push(newArr);
+	ret.push(newArr);
 
-  return generate(numRows, ret);
+	return generate(numRows, ret);
 };
 
 module.exports = generate;
 
 // @lc code=end
-

@@ -20,16 +20,16 @@
  */
 
 const hasPathSum = (root: TreeNode | null, targetSum: number): boolean => {
-  const sum = (root: TreeNode | null, counter: number): boolean | number => {
-    if (root == null) return false;
-    if (!root.left && !root.right && counter - root.val === 0) return true;
+	const sum = (root: TreeNode | null, counter: number): boolean | number => {
+		if (root == null) { return false; }
 
-    return <number>sum(root.left, counter - root.val) || <number>sum(root.right, counter - root.val);
-  }
+		if (!root.left && !root.right && counter - root.val === 0) { return true; }
 
-  return <boolean>sum(root, targetSum);
+		return <number>sum(root.left, counter - root.val) || <number>sum(root.right, counter - root.val);
+	};
+
+	return <boolean>sum(root, targetSum);
 };
 
 module.exports = hasPathSum;
 // @lc code=end
-
