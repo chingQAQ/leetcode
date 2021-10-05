@@ -7,6 +7,7 @@
 | [110][0110] | [Balanced Binary Tree](<./src/110.balanced-binary-tree.ts>) | ![Easy][Easy] |
 | [111][0111] | [Minimum Depth of Binary Tree](<./src/111.minimum-depth-of-binary-tree.ts>) | ![Easy][Easy] |
 | [112][0112] | [Path Sum](<./src/112.path-sum.ts>) | ![Easy][Easy] |
+| [118][0118] | [Path Sum](<./src/118.pascals-triangle.ts>) | ![Easy][Easy] |
 
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
 [0101]: https://leetcode.com/problems/symmetric-tree/
@@ -14,6 +15,7 @@
 [0110]: https://leetcode.com/problems/balanced-binary-tree/
 [0111]: https://leetcode.com/problems/minimum-depth-of-binary-tree/
 [0112]: https://leetcode.com/problems/path-sum/
+[0118]: https://leetcode.com/problems/pascals-triangle/
 
 
 [Easy]: https://img.shields.io/badge/-Easy-brightgreen
