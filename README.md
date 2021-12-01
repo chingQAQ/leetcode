@@ -11,6 +11,8 @@
 | [119][0119] | [Pascals Triangle II](<./src/119.pascals-triangle-ii.ts>) | ![Easy][Easy] |
 | [121][0121] | [Best Time to Buy and Sell Stock](<./src/121.best-time-to-buy-and-sell-stock.ts>) | ![Easy][Easy] |
 | [125][0125] | [Valid Palindrome](<./src/125.valid-palindrome.ts>) | ![Easy][Easy] |
+| [136][0136] | [Single Number](<./src/136.single-number.ts>) | ![Easy][Easy] |
+
 
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
 [0101]: https://leetcode.com/problems/symmetric-tree/
@@ -22,6 +24,7 @@
 [0119]: https://leetcode.com/problems/pascals-triangle-ii/
 [0121]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 [0125]: https://leetcode.com/problems/valid-palindrome/
+[0136]: https://leetcode.com/problems/single-number/
 
 
 [Easy]: https://img.shields.io/badge/-Easy-brightgreen
