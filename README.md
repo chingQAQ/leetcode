@@ -12,6 +12,7 @@
 | [121][0121] | [Best Time to Buy and Sell Stock](<./src/121.best-time-to-buy-and-sell-stock.ts>) | ![Easy][Easy] |
 | [125][0125] | [Valid Palindrome](<./src/125.valid-palindrome.ts>) | ![Easy][Easy] |
 | [136][0136] | [Single Number](<./src/136.single-number.ts>) | ![Easy][Easy] |
+| [141][0141] | [Linked List Cycle](<./src/141.linked-list-cycle.ts>) | ![Easy][Easy] |
 
 
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
@@ -25,6 +26,7 @@
 [0121]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
 [0125]: https://leetcode.com/problems/valid-palindrome/
 [0136]: https://leetcode.com/problems/single-number/
+[0141]: https://leetcode.com/problems/linked-list-cycle/description/
 
 
 [Easy]: https://img.shields.io/badge/-Easy-brightgreen
