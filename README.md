@@ -1,6 +1,7 @@
 # leetcode
 | Id | Title | Difficulty |
 | :--------: | :--------- | :---: |
+| [2][0002] | [Add Two Numbers](<./src/02.add-two-numbers.ts>) | ![Medium][Medium] |
 | [94][0094] | [Binary tree inorder traversal](<./src/94.binary-tree-inorder-traversal.ts>) | ![Easy][Easy] |
 | [101][0101] | [Symmetric Tree](<./src/101.symmetric-tree.ts>) | ![Easy][Easy] |
 | [108][0108] | [Convert Sorted Array to Binary Search Tree](<./src/108.convert-sorted-array-to-binary-search-tree.ts>) | ![Easy][Easy] |
@@ -10,6 +11,7 @@
 | [118][0118] | [Pascals Triangle](<./src/118.pascals-triangle.ts>) | ![Easy][Easy] |
 | [119][0119] | [Pascals Triangle II](<./src/119.pascals-triangle-ii.ts>) | ![Easy][Easy] |
 
+[0002]: https://leetcode.com/problems/add-two-numbers/
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
 [0101]: https://leetcode.com/problems/symmetric-tree/
 [0108]: https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/

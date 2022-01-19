@@ -145,10 +145,7 @@ module.exports = {
 		'no-useless-computed-key': 'error',
 		'no-useless-rename': 'error',
 		'no-var': 'error',
-		'prefer-const': [
-			'error',
-			{ ignoreReadBeforeAssign: true }
-		],
+		'prefer-const': ['off'],
 		'prefer-rest-params': 'error',
 		'prefer-spread': 'error',
 		'prefer-template': 'error',
