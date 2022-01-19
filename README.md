@@ -10,6 +10,11 @@
 | [112][0112] | [Path Sum](<./src/112.path-sum.ts>) | ![Easy][Easy] |
 | [118][0118] | [Pascals Triangle](<./src/118.pascals-triangle.ts>) | ![Easy][Easy] |
 | [119][0119] | [Pascals Triangle II](<./src/119.pascals-triangle-ii.ts>) | ![Easy][Easy] |
+| [121][0121] | [Best Time to Buy and Sell Stock](<./src/121.best-time-to-buy-and-sell-stock.ts>) | ![Easy][Easy] |
+| [125][0125] | [Valid Palindrome](<./src/125.valid-palindrome.ts>) | ![Easy][Easy] |
+| [136][0136] | [Single Number](<./src/136.single-number.ts>) | ![Easy][Easy] |
+| [141][0141] | [Linked List Cycle](<./src/141.linked-list-cycle.ts>) | ![Easy][Easy] |
+
 
 [0002]: https://leetcode.com/problems/add-two-numbers/
 [0094]: https://leetcode.com/problems/binary-tree-inorder-traversal/
@@ -20,6 +25,10 @@
 [0112]: https://leetcode.com/problems/path-sum/
 [0118]: https://leetcode.com/problems/pascals-triangle/
 [0119]: https://leetcode.com/problems/pascals-triangle-ii/
+[0121]: https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+[0125]: https://leetcode.com/problems/valid-palindrome/
+[0136]: https://leetcode.com/problems/single-number/
+[0141]: https://leetcode.com/problems/linked-list-cycle/description/
 
 
 [Easy]: https://img.shields.io/badge/-Easy-brightgreen
