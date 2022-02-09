@@ -1,7 +1,7 @@
 # leetcode
 | Id | Title | Difficulty |
 | :--------: | :--------- | :---: |
-| [2][0002] | [Add Two Numbers](<./src/02.add-two-numbers.ts>) | ![Medium][Medium] |
+| [2][0002] | [Add Two Numbers](<./src/2.add-two-numbers.ts>) | ![Medium][Medium] |
 | [19][0019] | [Remove Nth Node From End of List](<./src/19.remove-nth-node-from-end-of-list.ts>) | ![Medium][Medium] |
 | [94][0094] | [Binary tree inorder traversal](<./src/94.binary-tree-inorder-traversal.ts>) | ![Easy][Easy] |
 | [101][0101] | [Symmetric Tree](<./src/101.symmetric-tree.ts>) | ![Easy][Easy] |
